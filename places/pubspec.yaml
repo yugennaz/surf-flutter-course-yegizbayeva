@@ -17,7 +17,6 @@ dependencies:
 
 
 
-
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.3
 
@@ -31,6 +30,7 @@ flutter:
 
   uses-material-design: true
 
-  res:
-    - res/font
-    - red/image
+  # res:
+  #   - res/font
+  #   - res/image
+

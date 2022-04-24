@@ -2,7 +2,17 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(App());
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'App title',
+      home: MyFirstStatefultWidget(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyFirsStatelesstWidget(),
+      home: MyFirstStatefultWidget(),
     );
   }
 }
@@ -72,6 +82,7 @@ class MyFirsStatelesstWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     counter++;
     print(counter);
+    //Всегда 1, Stateless пересоздается при hotreload.
     return Container(
       child: Center(
         child: Text('Hello! $counter'),
@@ -79,6 +90,8 @@ class MyFirsStatelesstWidget extends StatelessWidget {
     );
   }
 }
+// Ошибка: The getter 'context' isn't defined for the class 'MyFirstWidget'
+// Type getContextRuntimeType() => context.runtimeType;
 
 class MyFirstStatefultWidget extends StatefulWidget {
   @override
@@ -92,10 +105,15 @@ class _MyFirstStatefultWidget extends State<MyFirstStatefultWidget> {
   Widget build(BuildContext context) {
     _counter++;
     print(_counter++);
+    //Счетчик увеличивается при хотрелоад, выводится значение 2,
+    // у Stateful состояние живёт дольше виджета и при перерисовке контекст не теряется.
     return Container(
       child: Center(
         child: Text('Hello! $_counter'),
       ),
     );
   }
+  // Работает, т.к. в классе State есть геттер для context
+  Type getContextRuntimeType() => context.runtimeType;
 }
+

@@ -1,5 +1,5 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:places/ui/screen/sight_list_screen.dart';
 
 void main() {
   runApp(App());
@@ -9,8 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App title',
-      home: MyFirstStatefultWidget(),
+      home: SightListScreenWidget(),
     );
   }
 }
@@ -113,7 +112,7 @@ class _MyFirstStatefultWidget extends State<MyFirstStatefultWidget> {
       ),
     );
   }
+
   // Работает, т.к. в классе State есть геттер для context
   Type getContextRuntimeType() => context.runtimeType;
 }
-

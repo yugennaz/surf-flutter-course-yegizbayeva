@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SightListScreenWidget(),
+      home: SightListScreen(),
     );
   }
 }
@@ -112,7 +112,4 @@ class _MyFirstStatefultWidget extends State<MyFirstStatefultWidget> {
       ),
     );
   }
-
-  // Работает, т.к. в классе State есть геттер для context
-  Type getContextRuntimeType() => context.runtimeType;
 }

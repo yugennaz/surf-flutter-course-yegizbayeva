@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SightListScreenWidget extends StatefulWidget {
+class SightListScreen extends StatefulWidget {
   @override
-  _SightListScreenWidget createState() => _SightListScreenWidget();
+  _SightListScreen createState() => _SightListScreen();
 }
 
-class _SightListScreenWidget extends State<SightListScreenWidget> {
+class _SightListScreen extends State<SightListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

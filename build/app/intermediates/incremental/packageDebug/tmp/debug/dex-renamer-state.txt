@@ -1,4 +1,4 @@
-#Sun Apr 24 13:05:22 ALMT 2022
-base.0=/Users/n.egizbaeva/surf-flutter-course-yegizbayeva/places/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Fri Apr 29 22:51:38 ALMT 2022
+base.0=/Users/n.egizbaeva/surf-flutter-course-yegizbayeva/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

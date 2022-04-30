@@ -10,9 +10,40 @@ class _SightListScreen extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My first App'),
-        centerTitle: true,
-        backgroundColor: Colors.purple,
+        centerTitle: false,
+        title: RichText(
+          text: TextSpan(
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                package: 'res',
+                fontSize: 32,
+              ),
+              children: [
+                TextSpan(
+                    text: 'C',
+                    style: TextStyle(
+                      color: Colors.green,
+                    )),
+                TextSpan(
+                    text: 'писок\n',
+                    style: TextStyle(
+                      color: Colors.black,
+                    )),
+                TextSpan(
+                    text: 'и',
+                    style: TextStyle(
+                      color: Colors.yellow,
+                    )),
+                TextSpan(
+                    text: 'нтересных мест',
+                    style: TextStyle(
+                      color: Colors.black,
+                    )),
+              ]),
+        ),
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        toolbarHeight: 72,
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
